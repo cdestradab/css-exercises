@@ -53,7 +53,7 @@ ul {
   padding: 8px; /* OK */
   display: flex; /* OK */
   align-items: center; /* this should be in a shared selector for left and right */
-  flex: auto;
+  flex: auto; /* Unnecesary */
   justify-content: flex-end; /* space-between is a better option */
 }
 
@@ -65,11 +65,11 @@ ul {
 }
 
 .left-side {
-  flex: auto;
+  flex: auto; /* Unnecesary */
 }
 
 .right-side {
-  flex: 1 0 1;
+  flex: 1 0 1; /* Unnecesary */
 }
 
 .links {
