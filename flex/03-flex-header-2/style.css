@@ -50,17 +50,18 @@ ul {
 /* MY SOLUTION */
 
 .header {
-  padding: 8px;
-  display: flex;
-  align-items: center;
+  padding: 8px; /* OK */
+  display: flex; /* OK */
+  align-items: center; /* this should be in a shared selector for left and right */
   flex: auto;
-  justify-content: flex-end;
+  justify-content: flex-end; /* space-between is a better option */
 }
 
 .left-side,
 .right-side {
-  display: flex;
-  gap: 16px;
+  display: flex; /* OK */
+  gap: 16px; /* OK */
+  /* align-items: center; */
 }
 
 .left-side {
@@ -72,8 +73,9 @@ ul {
 }
 
 .links {
-  display: flex;
-  align-content: flex-start;
-  padding: 0;
-  gap: 16px;
+  display: flex; /* OK */
+  align-content: flex-start; /* unnecesary if justify content: space-between is active in header */
+  padding: 0; /* OK */
+  gap: 16px; /* OK */
+  /* margin: 0; */
 }
