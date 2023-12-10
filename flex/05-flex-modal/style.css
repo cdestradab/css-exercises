@@ -71,30 +71,38 @@ button.cancel {
 /* MY SOLUTION */
 
 .modal {
-  display: flex;
+  display: flex; /* OK */
+  /* gap: 16px; */
+  /* padding: 16px; */
 }
 
 .icon {
-  flex: 1 0 auto;
-  margin: 10px;
-  align-self: flex-start;
+  flex: 1 0 auto; /* the same as flex-shrink: 0 */
+  margin: 10px; /* Unnecesary if there is a gap on .modal */
+  align-self: flex-start; /* Unnecesary */
 }
 
-.msg-container {
+.msg-container { /* Overall unnecesary if there is a gap */
   margin: 10px 10px 10px 0px;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: flex-start;
 }
 
 .msg-header {
-  align-self: stretch;
-  justify-content: space-between;
-  font-size: large;
-  font-weight: bolder;
-  display: flex;
+  align-self: stretch; /* could have been CENTER */
+  justify-content: space-between; /* OK */
+  font-size: large; /* could have been 18px ? */
+  font-weight: bolder; /* could have been 700 */
+  display: flex; /* OK */
 }
 
-.msg-body {
+.msg-body { /* Unnecesary if there is a gap in .modal */
   padding: 10px 0 10px;
 }
+
+/* This instead of what it is in msg-body
+.text {
+  margin-bottom: 16px;
+}
+*/
