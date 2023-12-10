@@ -31,62 +31,67 @@ body {
 /* MY SOLUTION */
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex; /* OK */
+  flex-direction: column; /* OK */
+  justify-content: space-between; /* Unnecesary */
 }
 
 .header {
-  font-size: 32px;
-  font-weight: 900;
-  padding: 16px;
+  font-size: 32px; /* OK */
+  font-weight: 900; /* OK */
+  padding: 16px; /* Could have been 0 16px */
   height: fit-content;
-  display: flex;
-  align-items: center;
+  display: flex; /* OK */
+  align-items: center; /* OK */
 }
 
 .content {
-  display: flex;
-  flex-grow: 1;
+  display: flex; /* OK */
+  flex-grow: 1; /* Could have been flex:1 and it is recommended */
 }
 
 .sidebar {
-  padding: 16px;
+  padding: 16px; /* OK */
+  /* flex-shrink: 0; but I think this is not necessary*/
 }
 
 .sidebar > ul {
-  list-style: none;
-  padding: 0;
-  width: 300px;
+  list-style: none; /* Could have been list-style-type */
+  padding: 0; /* OK */
+  /* margin: 0 */
+  width: 300px; /* OK */
 }
 
 .sidebar > ul > li {
-  margin: 12px;
+  margin: 12px; /* OK */
 }
 
 .sidebar > ul > li > a {
-  text-decoration: none;
-  font-size: 24px;
-  color: #ffffff;
+  text-decoration: none; /* OK */
+  font-size: 24px; /* OK */
+  color: #ffffff; /* OK */
 }
 
 .cards {
-  padding: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  padding: 32px; /* OK */
+  display: flex; /* OK */
+  flex-wrap: wrap; /* OK */
+  gap: 30px; /* Unnecessary but it worked */
 }
 
 .card {
-  padding: 16px;
-  min-width: 200px;
-  max-width: 20%;
-  flex-wrap: wrap;
-  flex: 0 1 auto;;
+  padding: 16px; /* OK */
+  /* 
+  margin: 16px;
+  width: 300px; */
+  min-width: 200px; /* Unnecesary if width and margin are defined */
+  max-width: 20%; /* Unnecesary if width and margin are defined */
+  flex-wrap: wrap; /* Completely unnecesary, this doesnt go here*/
+  flex: 0 1 auto; /* Unnecesary if width and margin are defined */
 }
 
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* OK */
+  align-items: center; /* OK */
+  justify-content: center; /* OK */
 }
