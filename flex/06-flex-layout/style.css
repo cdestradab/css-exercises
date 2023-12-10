@@ -30,36 +30,48 @@ input {
 
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex; /* OK */
+  flex-direction: column; /* OK */
+  justify-content: space-between; /* Unnecesary */
 }
 
+/*
+button {
+  padding: 8px 16px;
+}
+*/
+
 a {
-  text-decoration: none;
-  color: rgb(119,119,119);
-  font-weight: bold;
+  text-decoration: none; /* OK */
+  color: rgb(119,119,119); /* OK */
+  font-weight: bold; /* Optional */
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* OK */
+  flex-direction: column; /* OK */
+  align-items: center; /* OK */
+  /*
+  flex: 1;
+  justify-content: center;
+  gap: 16px;
+  */
 }
 
 .footer {
   background-color: rgb(238,238,238);
 }
 
-.extremes {
-  display: flex;
-  justify-content: space-between;
+.extremes { /* The same as .header,.footer */
+  display: flex; /* OK */
+  justify-content: space-between; /* OK */
+  /* padding: 16px; */
 }
 
 .extremes > ul {
-  list-style-type: none;
-  display: flex;
-  padding: 0;
-  margin: 15px;
-  gap: 15px;
+  list-style-type: none; /* COuld have been list-style:none */
+  display: flex; /* OK */
+  padding: 0; /* OK */
+  margin: 15px; /* Could have been 0 */
+  gap: 15px; /* OK */
 }
